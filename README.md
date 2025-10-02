@@ -1,9 +1,29 @@
+# Room Upgrade Data Science Challenge
+
+A data science project for analyzing and predicting room upgrades.
+=======
 # Room Upgrade - Skibookers Challenge
 Data Science Challenge Project
 
 ## Project Structure
 
 ```
+room_upgrade/
+├── src/                    # Source code
+│   ├── __init__.py
+│   └── data_processing.py  # Data processing utilities
+├── data/
+│   ├── raw/               # Raw data files
+│   └── processed/         # Processed data files
+├── notebooks/             # Jupyter notebooks for analysis
+├── requirements.txt       # Project dependencies
+└── README.md
+```
+
+## Setup
+
+1. Install dependencies:
+=======
 skibookers-challenge/
 │── data/                 # CSVs (or instructions to download)
 │── notebooks/            # Exploratory & final analysis
@@ -40,6 +60,22 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+2. Place your raw data in the `data/raw/` directory
+
+3. Run data processing:
+```python
+from src.data_processing import load_data, preprocess_data, save_processed_data
+
+# Load and process data
+df = load_data('data/raw/your_data.csv')
+df_processed = preprocess_data(df)
+save_processed_data(df_processed, 'data/processed/processed_data.csv')
+```
+
+## Usage
+
+See the notebooks directory for example analyses and workflows.
+=======
 ## Data
 
 Place your CSV data files in the `data/` directory. If the data needs to be downloaded, add instructions or a script in the `data/` folder.
